@@ -10,6 +10,12 @@ function App(props) {
     setColorPicker(event.rgb);
   };
 
+  const copyClipboard = () => {
+    navigator.clipboard.writeText(
+      `rgb (${colorPicker.r}, ${colorPicker.g}, ${colorPicker.b})`
+    );
+  };
+
   return (
     <div className='root'>
       <div className='row'>
@@ -18,6 +24,9 @@ function App(props) {
           onChange={handleColorChange} />
       </div>
 
+      <div className="App">
+        <button onClick={copyClipboard}>Copy clipboard</button>
+      </div>
     </div>
   );
 }

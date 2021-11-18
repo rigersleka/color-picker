@@ -4,9 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const baseData = {
+  r: '205',
+  g: '129',
+  b: '59',
+};
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App 
+    baseColorState={baseData}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
