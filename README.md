@@ -1,5 +1,4 @@
-# Live
-https://shade-swatch-picker.netlify.app/
+## <a href="https://shade-swatch-picker.netlify.app/" target="_blank">LIVE DEMO</a>
 
 # Getting Started with Create React App
 
