@@ -19,7 +19,7 @@ function App(props) {
   };
 
   return (
-    <div className='App'>
+    <div className='root'>
       <div className='row'>
         <ShadePicker color={colorPicker} onChange={handleColorChange} />
       </div>
