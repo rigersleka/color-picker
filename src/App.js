@@ -1,11 +1,23 @@
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+import ShadePicker from './ShadePicker';
 
-      </header>
+function App(props) {
+  const [colorPicker, setColorPicker] = useState(props.baseColorState);
+
+  const handleColorChange = (event) => {
+    setColorPicker(event.rgb);
+  };
+
+  return (
+    <div className='root'>
+      <div className='row'>
+        <ShadePicker 
+          color={colorPicker} 
+          onChange={handleColorChange} />
+      </div>
+
     </div>
   );
 }
