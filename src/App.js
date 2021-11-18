@@ -3,8 +3,8 @@ import { Col, Row, Button } from 'react-bootstrap';
 import './App.css';
 
 /** Import 2 main Components */
-import SwatchesBottomPicker from './SwatchesBottomPicker';
-import ShadePicker from './ShadePicker';
+import SwatchesBottomPicker from './components/SwatchesBottomPicker';
+import ShadePicker from './components/ShadePicker';
 
 function App(props) {
   const [colorPicker, setColorPicker] = useState(props.baseColorState);

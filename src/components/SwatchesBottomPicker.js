@@ -4,7 +4,7 @@ import { CustomPicker } from 'react-color';
 import { EditableInput, Hue } from 'react-color/lib/components/common';
 
 // destruct parameters instead of using props all time
-const SwatchesPicker = ({  hex, hsl, onChange }) => {
+const SwatchesPicker = ({ hex, hsl, onChange }) => {
   const styles = {
     hue: {
       height: 10,
@@ -24,7 +24,7 @@ const SwatchesPicker = ({  hex, hsl, onChange }) => {
   };
 
   return (
-    <div>
+    <>
       <div style={styles.hue}>
         <Hue hsl={hsl} onChange={onChange} />
       </div>
@@ -38,10 +38,8 @@ const SwatchesPicker = ({  hex, hsl, onChange }) => {
         <div style={styles.swatch} />
       </div>
 
-      <div style={{ height: 18, width: 200, position: 'relative' }}>
-     
-    </div>
-    </div>
+      <div style={{ height: 18, width: 200, position: 'relative' }}></div>
+    </>
   );
 };
 
