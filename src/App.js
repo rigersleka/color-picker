@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 
+/** Import 2 main Components */
 import SwatchesBottomPicker from './SwatchesBottomPicker';
+import ShadePicker from './ShadePicker';
 
 function App(props) {
   const [colorPicker, setColorPicker] = useState(props.baseColorState);
@@ -18,6 +20,10 @@ function App(props) {
 
   return (
     <div className='App'>
+      <div className='row'>
+        <ShadePicker color={colorPicker} onChange={handleColorChange} />
+      </div>
+
       <div className='row'>
         <SwatchesBottomPicker
           color={colorPicker}
