@@ -1,5 +1,5 @@
 # Live
-shade-swatch-picker.netlify.app
+https://shade-swatch-picker.netlify.app/
 
 # Getting Started with Create React App
 
