@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Col, Row, Button } from 'react-bootstrap';
 import './App.css';
 
 /** Import 2 main Components */
@@ -19,19 +20,28 @@ function App(props) {
   };
 
   return (
-    <div className='root'>
-      <div className='row'>
-        <ShadePicker color={colorPicker} onChange={handleColorChange} />
-      </div>
+    <>
+      <div className='root'>
+          <Col>
+            <Row sm={12}>
+              <ShadePicker color={colorPicker} onChange={handleColorChange} />
+            </Row>
 
-      <div className='row'>
-        <SwatchesBottomPicker
-          color={colorPicker}
-          onChange={handleColorChange}
-        />
+            <Row sm={12}>
+              <SwatchesBottomPicker
+                color={colorPicker}
+                onChange={handleColorChange}
+              />
+            </Row>
+
+            <Row sm={12}>
+              <Button onClick={copyClipboard}>
+                {'Copy Clipboard'}
+              </Button>
+            </Row>
+          </Col>
       </div>
-      <button onClick={copyClipboard}>Copy clipboard</button>
-    </div>
+    </>
   );
 }
 
